@@ -32,7 +32,7 @@ var T = new Twit({  // You need to setup your own twitter configuration here!
 
 
 
-var stream = T.stream('statuses/filter',  { locations: world});
+var stream = T.stream('statuses/filter', { track: ['cloudy','rain today','rain','storm','raining','stormy','windy'] }, { locations: world});
 
 stream.on('error',function(error){
   console.log(error);
